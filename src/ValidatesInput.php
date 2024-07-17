@@ -36,7 +36,7 @@ trait ValidatesInput
      * @return mixed
      * @throws \Symfony\Component\Console\Exception\InvalidArgumentException
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         if ($this->validator()->fails()) {
             throw new InvalidArgumentException($this->formatErrors());
